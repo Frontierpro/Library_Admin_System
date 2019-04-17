@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Library | Log in</title>
+    <link rel="icon" type="image/x-icon" href="../src/Icon.ico" />
+    <link rel="stylesheet" type="text/css" href="./Index.css" />
+    <script type="text/javascript" src="./Index.js"></script>
+</head>
+
+<body style="margin:0;">
+    <div id="head">
+        <img src="../src/Library.png" style="height:24px; width:24px; float:left;" />
+        <span style="font-size:24px; color:#373737; float:left;">&nbsp;Library Administration System</span>
+        <span id="book" onmouseover="Book_Over(true)" onmouseout="Book_Over(false)" onclick="Request_Reject()">
+            <a id="book_url" href="./Index.html" style="text-decoration:none; color:#373737;">Book</a>
+        </span>
+        <span id="card" onmouseover="Card_Over(true)" onmouseout="Card_Over(false)" onclick="Request_Reject()">
+            <a id="card_url" href="./Index.html" style="text-decoration:none; color:#373737;">Card</a>
+        </span>
+    </div>
+    <div id="content">
+        <img src="../src/Index.png" style="height:540px; width:55%; margin-left:3%; margin-top:30px; float:left;" />
+        <img src="../src/line.png" style="height:540px; width:3%; margin-left:5%; margin-top:30px; float:left;" />
+        <fieldset id="field">
+            <legend style="font-size:24px;">Identity Check</legend><br />
+            <p style="margin-left:10%; font-size:20px;">admin ID:</p>
+            <input id="ID" type="text" onchange="Character_Warning()"></input>
+            <p id="ID_note"></p>
+            <p style="margin-left:10%; font-size:20px;">password:</p>
+            <input id="password" type="password" onchange="Character_Warning()"></input>
+            <p id="password_note"></p>
+            <button id="press" type="submit" onclick="Button_Press()">log in</button>
+        </fieldset>
+    </div>
+    <div id="tail"></div>
+</body>
+
+</html>
