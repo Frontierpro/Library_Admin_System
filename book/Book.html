@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Library | Book admin</title>
+    <link rel="icon" type="image/x-icon" href="../src/Icon.ico" />
+    <link rel="stylesheet" type="text/css" href="./Book.css" />
+    <script type="text/javascript" src="./Book.js"></script>
+</head>
+
+<body style="margin:0;" onload="Page_Initial()">
+    <div id="head">
+        <img src="../src/Book.png" style="height:24px; width:24px; float:left;" />
+        <span style="font-size:24px; color:#373737; float:left;">&nbsp;Book Administration System</span>
+        <img src="../src/Admin.png" style="margin-top:5px; margin-left:65%; height:20px; width:20px; float:left;" />
+        <span id="user"></span>
+    </div>
+    <div id="content">
+        <fieldset id="field" style="border-color:#ffffff; margin-top:50px; margin-left:3%; width:20%; height:480px; float:left;">
+            <div style="margin-top:22px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">book&nbsp;number</span>
+                <input id="bno" type="text" style="margin-right:3%; height:16px; width:60%; float:right;"></input>
+            </div>
+            <div style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">category</span>
+                <select id="category" style="margin-right:3%; height:22px; width:61.3%; float:right;"></select>
+            </div>
+            <div style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">title</span>
+                <input id="title" type="text" style="margin-right:3%; height:16px; width:60%; float:right;"></input>
+            </div>
+            <div style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">press</span>
+                <input id="publication" type="text" style="margin-right:3%; height:16px; width:60%; float:right;"></input>
+            </div>
+            <div style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">author</span>
+                <input id="author" type="text" style="margin-right:3%; height:16px; width:60%; float:right;"></input>
+            </div>
+            <div id="year_select" style="margin-top:20px;">
+                <p style="font-size:15px; margin-left:3%; color:#ffff00;">year&nbsp;domain</p>
+                <input id="year_start" type="text" style="margin-left:3%; height:16px; width:39%;"></input>
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">to</span>
+                <input id="year_end" type="text" style="margin-left:3%; height:16px; width:39%;"></input>
+            </div>
+            <div id="price_select" style="margin-top:20px;">
+                <p style="font-size:15px; margin-left:3%; color:#ffff00;">price&nbsp;domain</p>
+                <input id="price_start" type="text" style="margin-left:3%; height:16px; width:39%;"></input>
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">to</span>
+                <input id="price_end" type="text" style="margin-left:3%; height:16px; width:39%;"></input>
+            </div>
+            <div id="year_other" style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">year</span>
+                <input id="year" type="text" style="margin-right:3%; height:16px; width:60%; float:right;"></input>
+            </div>
+            <div id="price_other" style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">price</span>
+                <input id="price" type="text" style="margin-right:3%; height:16px; width:60%; float:right;"></input>
+            </div>
+            <div id="num_all" style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">num</span>
+                <input id="num" type="text" style="margin-right:3%; height:16px; width:60%; float:right;"></input>
+            </div>
+            <div style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">operation</span>
+                <select id="operation" style="margin-right:3%; height:22px; width:61.3%; float:right;" onchange="Content_Renew()"></select>
+            </div>
+            <div id="select_order" style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">order</span>
+                <select id="order" style="margin-right:3%; height:22px; width:61.3%; float:right;">
+                    <option value="bno_up">book&nbsp;number&nbsp;increasing</option>
+                    <option value="bno_down">book&nbsp;number&nbsp;decreasing</option>
+                    <option value="year_up">year&nbsp;increasing</option>
+                    <option value="year_down">year&nbsp;decreasing</option>
+                    <option value="price_up">price&nbsp;increasing</option>
+                    <option value="price_down">price&nbsp;decreasing</option>
+                    <option value="stock_up">stock&nbsp;increasing</option>
+                    <option value="stock_down" selected="selected">stock&nbsp;decreasing</option>
+                    <option value="total_up">total&nbsp;increasing</option>
+                    <option value="total_down">total&nbsp;decreasing</option>
+                </select>
+            </div>
+            <button id="press" type="submit" onclick="Button_Press()">done</button>
+        </fieldset>
+        <img src="../src/Line.png" style="height:540px; width:3%; margin-left:2%; margin-top:30px; float:left;"></img>
+        <iframe id="framework" src="./List.html" frameborder="0"></iframe>
+    </div>
+    <div id="tail"></div>
+</body>
+
+</html>
