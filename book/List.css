@@ -1,0 +1,19 @@
+.book_list {
+    margin-bottom: 10px;
+    background-color: #373737;
+    border-radius: 10px;
+    width: 94%;
+    height: 57px;
+    border: 1.5px solid #ffa500;
+    color:#ffff00;
+    display: none;
+}
+#summary {
+    background-color: #373737;
+    top: 540px;
+    height: 27px;
+    width: 94%;
+    border: 1.5px solid #00fa9a;
+    position: fixed;
+    color: #00bfff;
+}
