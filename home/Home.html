@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Library | Home page</title>
+    <link rel="icon" type="image/x-icon" href="../src/Icon.ico" />
+    <link rel="stylesheet" type="text/css" href="./Home.css" />
+    <script type="text/javascript" src="./Home.js"></script>
+</head>
+
+<body style="margin:0;" onload="Page_Initial()">
+    <div id="head">
+        <img src="../src/Library.png" style="height:24px; width:24px; float:left;" />
+        <span style="font-size:24px; color:#373737; float:left;">&nbsp;Library Administration System</span>
+        <span id="book" onmouseover="Book_Over(true)" onmouseout="Book_Over(false)">
+            <a id="book_url" href="../book/Book.html" target="_blank" style="text-decoration:none; color:#373737;">Book</a>
+        </span>
+        <span id="card" onmouseover="Card_Over(true)" onmouseout="Card_Over(false)">
+            <a id="card_url" href="../card/Card.html" target="_blank" style="text-decoration:none; color:#373737;">Card</a>
+        </span>
+    </div>
+    <div id="content">
+        <img src="../src/Index.png" style="height:540px; width:55%; margin-left:3%; margin-top:30px; float:left;" />
+        <img src="../src/Line.png" style="height:540px; width:3%; margin-left:5%; margin-top:30px; float:left;" />
+        <fieldset id="field">
+            <legend id="caption" style="font-size:24px;"></legend><br />
+            <p style="margin-left:10%; font-size:20px;">book:</p>
+            <table id="book_note" width="90%" cellpadding="0" cellspacing="0" style="color:#ffff00; font-size:16px; margin-left:10%;">
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="3"></td>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                </tr>
+            </table>
+            <p style="margin-top:26px; margin-left:10%; font-size:20px;">card:</p>
+            <table id="card_note" width="90%" cellpadding="0" cellspacing="0" style="color:#ffff00; font-size:16px; margin-left:10%;">
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="3"></td>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                    <td style="width:10%;"></td>
+                </tr>
+            </table>
+            <button id="press" type="submit" onclick="Button_Press()">log out</button>
+        </fieldset>
+    </div>
+    <div id="tail"></div>
+</body>
+
+</html>
