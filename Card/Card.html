@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Library | Card admin</title>
+    <link rel="icon" type="image/x-icon" href="../src/Icon.ico" />
+    <link rel="stylesheet" type="text/css" href="./Card.css" />
+    <script type="text/javascript" src="./Card.js"></script>
+</head>
+
+<body style="margin:0;" onload="Page_Initial()">
+    <div id="head">
+        <img src="../src/Card.png" style="height:24px; width:24px; float:left;" />
+        <span style="font-size:24px; color:#373737; float:left;">&nbsp;Card Administration System</span>
+        <img src="../src/Admin.png" style="margin-top:5px; margin-left:65%; height:20px; width:20px; float:left;" />
+        <span id="user"></span>
+    </div>
+    <div id="content">
+        <fieldset id="field" style="border-color:#ffffff; margin-top:50px; margin-left:3%; width:20%; height:480px; float:left;">
+            <div style="margin-top:22px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">card&nbsp;number</span>
+                <input id="cno" type="text" style="margin-right:3%; height:16px; width:60%; float:right;"></input>
+            </div>
+            <div style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">name</span>
+                <input id="name" type="text" style="margin-right:3%; height:16px; width:60%; float:right;"></input>
+            </div>
+            <div style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">department</span>
+                <select id="department" style="margin-right:3%; height:22px; width:61.3%; float:right;"></select>
+            </div>
+            <div style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">type</span>
+                <select id="type" style="margin-right:3%; height:22px; width:61.3%; float:right;">
+                    <option value=""></option>
+                    <option value="T">teacher</option>
+                    <option value="S">student</option>
+                </select>
+            </div>
+            <div style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">bno</span>
+                <input id="bno" type="text" style="margin-right:3%; height:16px; width:60%; float:right;"></input>
+            </div>
+            <div id="borrow_date" style="margin-top:20px;">
+                <p style="font-size:15px; margin-left:3%; color:#ffff00;">borrow&nbsp;date</p>
+                <select id="borrow_year" style="margin-left:3%; height:22px; width:20%;" onchange="Borrow_Renew()">
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2012</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                </select>
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">--</span>
+                <select id="borrow_month" style="margin-left:3%; height:22px; width:29%;" onchange="Borrow_Renew()">
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">Octobor</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">--</span>
+                <select id="borrow_day" style="margin-left:3%; height:22px; width:20%;"></select>
+            </div>
+            <div id="return_date" style="margin-top:20px;">
+                <p style="font-size:15px; margin-left:3%; color:#ffff00;">return&nbsp;date</p>
+                <select id="return_year" style="margin-left:3%; height:22px; width:20%;" onchange="Return_Renew()">
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                </select>
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">--</span>
+                <select id="return_month" style="margin-left:3%; height:22px; width:29%;" onchange="Return_Renew()">
+                    <option value="12">December</option>
+                    <option value="11">November</option>
+                    <option value="10">Octobor</option>
+                    <option value="09">September</option>
+                    <option value="08">August</option>
+                    <option value="07">July</option>
+                    <option value="06">June</option>
+                    <option value="05">May</option>
+                    <option value="04">April</option>
+                    <option value="03">March</option>
+                    <option value="02">February</option>
+                    <option value="01">January</option>    
+                </select>
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">--</span>
+                <select id="return_day" style="margin-left:3%; height:22px; width:20%;"></select>
+            </div>
+            <div style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">operation</span>
+                <select id="operation" style="margin-right:3%; height:22px; width:61.3%; float:right;"></select>
+            </div>
+            <div id="select_order" style="margin-top:20px;">
+                <span style="font-size:15px; margin-left:3%; color:#ffff00;">order</span>
+                <select id="order" style="margin-right:3%; height:22px; width:61.3%; float:right;">
+                    <option value="borrow_up">borrow&nbsp;date&nbsp;increasing</option>
+                    <option value="borrow_down">borrow&nbsp;date&nbsp;decreasing</option>
+                    <option value="return_up">return&nbsp;date&nbsp;increasing</option>
+                    <option value="return_down" selected="selected">return&nbsp;date&nbsp;decreasing</option>
+                </select>
+            </div>
+            <button id="press" type="submit" onclick="Button_Press()">done</button>
+        </fieldset>
+        <img src="../src/Line.png" style="height:540px; width:3%; margin-left:2%; margin-top:30px; float:left;"></img>
+        <iframe id="framework" src="./Record.html" frameborder="0"></iframe>
+    </div>
+    <div id="tail"></div>
+</body>
+
+</html>
