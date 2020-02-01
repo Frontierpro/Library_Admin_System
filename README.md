@@ -1,6 +1,6 @@
 <html>
     <body style="margin:0;">
-        <h1>Mini Library Admin System</h1>
+        <h1>Library Admin System</h1>
         <h3>Claim:</h3>
         <ul>
             <li>This is a full stack web application.</li>
