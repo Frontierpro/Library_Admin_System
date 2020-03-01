@@ -59,7 +59,7 @@ In fact, ```localhost``` is corresponding to ```C:/apache/Apache24/htdocs```
 
 * PHP
 
-You should copy ```C:/php/php.ini-development```, place the transcipt under the same path and rename it as ```php.ini```.
+You should copy ```C:/php/php.ini-development```, place the transcript under the same path and rename it as ```php.ini```.
 
 Then edit this ```php.ini``` file.
 
